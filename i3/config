@@ -23,7 +23,7 @@ font pango:System San Francisco Display 13px
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec tilix
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -217,7 +217,7 @@ exec_always --no-startup-id xset -b
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id xfce4-clipman
 exec_always --no-startup-id compton
-exec_always --no-startup-id gnome-terminal
+exec_always --no-startup-id tilix
 exec_always --no-startup-id firefox
 exec_always --no-startup-id xdg-settings set default-web-browser firefox.desktop
 # exec_always --no-startup-id google-chrome-stable
@@ -228,5 +228,6 @@ assign [class="firefox"] $ws2
 assign [class="firefoxdeveloperedition"] $ws2
 assign [class="Opera developer"] $ws2
 assign [class="Gnome-terminal"] $ws1
+assign [class="Tilix"] $ws1
 assign [class="Thunderbird"] $ws9
 assign [class="Audacious"] $ws10

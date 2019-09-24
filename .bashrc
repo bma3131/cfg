@@ -16,3 +16,8 @@ complete -cf sudo
 
 # Tab as 4 spaces
 tabs -4
+
+# Tilix fix
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
