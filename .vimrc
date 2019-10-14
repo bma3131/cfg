@@ -98,3 +98,7 @@ let g:haskell_classic_highlighting = 1
 set foldmethod=indent
 set foldlevel=99
 set foldclose=all
+
+" Python identation
+autocmd FileType python setlocal ts=4 sts=0 sw=4 noexpandtab
+autocmd FileType python setlocal formatoptions=croql 

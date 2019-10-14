@@ -212,6 +212,7 @@ bindsym --release Print exec --no-startup-id flameshot gui
 # exec_always --no-startup-id feh --bg-scale /home/bma/Pictures/Arch1.jpg
 exec_always --no-startup-id xrandr --output VGA-1 --off --output HDMI-1 --off --output eDP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal
 exec_always --no-startup-id setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle -option keypad:pointerkeys
+exec_always --no-startup-id xmodmap ~/.Xmodmap # custom keymap
 exec_always --no-startup-id xset dpms 0 0 180
 exec_always --no-startup-id xset -b
 exec_always --no-startup-id numlockx on
