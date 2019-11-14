@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'flazz/vim-colorschemes'
 Plug 'StanAngeloff/php.vim'
+Plug 'xavierd/clang_complete'
+Plug 'shawncplus/phpcomplete.vim'
 
 call plug#end()
 
@@ -26,10 +28,12 @@ endif
 
 " setup
 colorscheme Tomorrow-Night-Eighties
-highlight LineNr guibg=NONE
-highlight Normal guibg=NONE
-highlight NonText guibg=NONE
-highlight ColorColumn guibg=grey
+highlight LineNr guifg=Silver
+highlight CursorLineNr guifg=Grey14 guibg=Grey42
+highlight StatusLine guibg=Grey82
+" highlight Normal guibg=NONE
+" highlight NonText guibg=NONE
+" highlight ColorColumn guibg=grey
 
 set number
 set autoindent
@@ -44,3 +48,20 @@ set foldclose=all
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+
+" Relative numbers function (ctrl + l)
+function! g:ToggleNuMode()
+  if &rnu == 0
+     set rnu
+  else
+     set nornu
+  endif
+endfunction
+nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
+
+" C Completion
+let g:clang_library_path='/usr/lib/llvm-3.9/lib/'
+
+" PHP Completion
+
+
