@@ -2,9 +2,11 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'flazz/vim-colorschemes'
-Plug 'StanAngeloff/php.vim'
 Plug 'xavierd/clang_complete'
+Plug 'StanAngeloff/php.vim'
 Plug 'shawncplus/phpcomplete.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-vdebug/vdebug'
 
 call plug#end()
 
@@ -26,30 +28,20 @@ if (empty($TMUX))
 endif
 
 
-" setup
-colorscheme Tomorrow-Night-Eighties
-highlight LineNr guifg=Silver
-highlight CursorLineNr guifg=Grey14 guibg=Grey42
-highlight StatusLine guibg=Grey82
-" highlight Normal guibg=NONE
-" highlight NonText guibg=NONE
-" highlight ColorColumn guibg=grey
-
+" Setup
+" General
 set number
 set autoindent
 set colorcolumn=78
 set tabstop=4
 set shiftwidth=4
 
+" Folding
 set foldmethod=indent
 set foldlevel=99
 set foldclose=all
 
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
-
-" Relative numbers function (ctrl + l)
+" Relative numbers function and bind (ctrl + l)
 function! g:ToggleNuMode()
   if &rnu == 0
      set rnu
@@ -59,9 +51,23 @@ function! g:ToggleNuMode()
 endfunction
 nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
 
+" Filetypes tabs
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+
 " C Completion
 let g:clang_library_path='/usr/lib/llvm-3.9/lib/'
 
-" PHP Completion
+" NERDTree Toggle Bind
+map <C-n> :NERDTreeToggle<CR>
 
-
+" Colors
+colorscheme Tomorrow-Night-Eighties
+highlight LineNr guifg=Silver
+highlight CursorLineNr guifg=Grey14 guibg=Grey42
+highlight StatusLine guifg=Grey66 guibg=Grey11
+highlight Normal guibg=Grey11
+highlight NonText guibg=Grey11
+highlight DbgBreakptLine guibg=Grey23
+" highlight ColorColumn guibg=Grey11
