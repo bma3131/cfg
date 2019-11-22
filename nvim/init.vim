@@ -7,6 +7,9 @@ Plug 'StanAngeloff/php.vim'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-vdebug/vdebug'
+Plug 'pangloss/vim-javascript'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -64,10 +67,16 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Colors
 colorscheme Tomorrow-Night-Eighties
+"colorscheme breeze
 highlight LineNr guifg=Silver
 highlight CursorLineNr guifg=Grey14 guibg=Grey42
 highlight StatusLine guifg=Grey66 guibg=Grey11
 highlight Normal guibg=Grey11
 highlight NonText guibg=Grey11
 highlight DbgBreakptLine guibg=Grey23
+highlight NERDTreeFile guibg=None
 " highlight ColorColumn guibg=Grey11
+
+"let g:airline_theme='minimalist'
+let g:airline_theme='desertink'
+let g:airline_powerline_fonts = 1
