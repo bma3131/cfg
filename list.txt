@@ -1,7 +1,0 @@
-bash
-vim
-i3
-i3blocks
-rofi
-compton
-tern-config

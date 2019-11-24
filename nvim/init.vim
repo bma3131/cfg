@@ -43,6 +43,7 @@ set shiftwidth=4
 set foldmethod=indent
 set foldlevel=99
 set foldclose=all
+set guicursor=i:blinkwait700-blinkon400-blinkoff250
 
 " Relative numbers function and bind (ctrl + l)
 function! g:ToggleNuMode()
@@ -69,14 +70,13 @@ map <C-n> :NERDTreeToggle<CR>
 colorscheme Tomorrow-Night-Eighties
 "colorscheme breeze
 highlight LineNr guifg=Silver
-highlight CursorLineNr guifg=Grey14 guibg=Grey42
-highlight StatusLine guifg=Grey66 guibg=Grey11
+"highlight CursorLineNr guifg=Grey14 guibg=Grey42
+"highlight StatusLine guifg=Grey66 guibg=Grey11
 highlight Normal guibg=Grey11
 highlight NonText guibg=Grey11
 highlight DbgBreakptLine guibg=Grey23
 highlight NERDTreeFile guibg=None
 " highlight ColorColumn guibg=Grey11
 
-"let g:airline_theme='minimalist'
-let g:airline_theme='desertink'
-let g:airline_powerline_fonts = 1
+let g:airline_theme='minimalist'
+"let g:airline_theme='desertink'

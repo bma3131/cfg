@@ -1,11 +1,12 @@
 ! apperance
 !URxvt.font: xft:Droid Sans Mono:size=10
 URxvt.font: xft:Source Code Pro:size=10
+!URxvt.font: xft:Inconsolata:size=12
 !URxvt.font: xft:DejaVu Sans Mono:size=10
-URxvt.letterSpace: -1
+URxvt.letterSpace: 0
 URxvt.scrollBar: false
 urxvt*transparent: true
-urxvt*shading: 15
+urxvt*shading: 10
 
 ! extenstions
 URxvt.perl-ext-common: default,matcher,resize-font,new-window

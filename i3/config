@@ -1,3 +1,8 @@
+# deps: otf-san-franciscor, urxvt, rofi, pulseaudio, light, flameshot,
+# i3lock-color (+ ui3lock script), i3blocks, xrand, numlockx, compton,
+# xf86-input-synaptics, dpms, NetworkManager, xfce4-clipman, 
+# xfce4-power-manager, firefox
+
 # Variables
 # Mod key
 set $mod Mod4
@@ -24,7 +29,7 @@ set $urgent-bg-color		#8D0A01
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:System San Francisco Display 12px
+font pango:System San Francisco Display 11px
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -60,7 +65,7 @@ mode "resize" {
 
 # Binds
 # start a terminal
-bindsym --release $mod+Return exec urxvt
+bindsym --release $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -165,8 +170,8 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10 # increase screen b
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 # decrease screen brightness
 
 # i3lock
-bindsym $mod+shift+x exec --no-startup-id i3lock --color "$bg-color" && sleep 1 && xset dpms force off
-bindsym $mod+shift+z exec --no-startup-id i3lock --color "$bg-color" && sleep 1 && systemctl suspend
+bindsym $mod+shift+x exec --no-startup-id /home/bma/bin/ui3lock && sleep 1 && xset dpms force off
+bindsym $mod+shift+z exec --no-startup-id systemctl suspend
 
 # PrintScreen
 bindsym --release Print exec --no-startup-id flameshot gui
@@ -204,14 +209,14 @@ bar {
 # Borders setup
 for_window [class="URxvt"] border pixel 1
 for_window [class="Mate-terminal"] border pixel 1
+for_window [class="Termite"] border pixel 1
 
 
 # Startup Exec
 # exec_always --no-startup-id feh --bg-scale /home/bma/Pictures/Arch1.jpg
 exec_always --no-startup-id xrandr --output VGA-1 --off --output HDMI-1 --off --output eDP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal
 exec_always --no-startup-id setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle -option keypad:pointerkeys
-exec_always --no-startup-id xset dpms 0 0 180
-exec_always --no-startup-id xset -b
+# exec_always --no-startup-id xset -b
 exec --no-startup-id synclient VertScrollDelta=-50 HorizTwoFingerScroll=1 HorizScrollDelta=-80 FingerHigh=10 # FingerLow=10
 # exec_always --no-startup-id xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
 # exec_always --no-startup-id xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Disable While Typing Enabled" 0
@@ -223,6 +228,10 @@ exec_always --no-startup-id xfce4-clipman
 # exec_always --no-startup-id firefox
 exec_always --no-startup-id xdg-settings set default-web-browser firefox.desktop
 # exec_always --no-startup-id google-chrome-stable
+# exec_always --no-startup-id xautolock -time 3 -locker "xset dpms force off" 
+# exec_always --no-startup-id xautolock -time 5 -locker i3lock --color "$bg-color"
+# exec_always --no-startup-id xautolock -time 10 -locker "systemctl suspend"
+exec_always --no-startup-id xfce4-power-manager
 
 # Workspace Assignments
 # assign [class="Google-chrome"] $ws2
