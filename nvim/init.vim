@@ -5,11 +5,12 @@ Plug 'flazz/vim-colorschemes'
 Plug 'xavierd/clang_complete'
 Plug 'StanAngeloff/php.vim'
 Plug 'shawncplus/phpcomplete.vim'
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 Plug 'vim-vdebug/vdebug'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -45,6 +46,9 @@ set foldlevel=99
 set foldclose=all
 set guicursor=i:blinkwait700-blinkon400-blinkoff250
 
+" Completion
+set completeopt-=preview
+
 " Relative numbers function and bind (ctrl + l)
 function! g:ToggleNuMode()
   if &rnu == 0
@@ -64,7 +68,10 @@ autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
 let g:clang_library_path='/usr/lib/llvm-3.9/lib/'
 
 " NERDTree Toggle Bind
-map <C-n> :NERDTreeToggle<CR>
+"map <C-n> :NERDTreeToggle<CR>
+
+" Emmet self-closing tag
+let g:emmet_html5 = 0
 
 " Colors
 colorscheme Tomorrow-Night-Eighties

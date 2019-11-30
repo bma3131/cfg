@@ -243,5 +243,6 @@ assign [class="Xfce4-terminal"] $ws1
 assign [class="Gnome-terminal"] $ws1
 assign [class="Mate-terminal"] $ws1
 assign [class="URxvt"] $ws1
+assign [class="Termite"] $ws1
 assign [class="Thunderbird"] $ws9
 assign [class="Audacious"] $ws10
