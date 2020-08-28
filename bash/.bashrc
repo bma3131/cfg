@@ -26,3 +26,6 @@ if [[ $TERM == xterm-termite ]]; then
   . /etc/profile.d/vte.sh
   __vte_prompt_command
 fi
+
+# qt5ct
+export QT_QPA_PLATFORMTHEME=qt5ct

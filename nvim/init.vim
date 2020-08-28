@@ -8,8 +8,8 @@ Plug 'shawncplus/phpcomplete.vim'
 "Plug 'scrooloose/nerdtree'
 Plug 'vim-vdebug/vdebug'
 Plug 'pangloss/vim-javascript'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim'
 
 call plug#end()
@@ -37,6 +37,7 @@ endif
 set number
 set autoindent
 set colorcolumn=78
+set linebreak
 set tabstop=4
 set shiftwidth=4
 
@@ -45,6 +46,42 @@ set foldmethod=indent
 set foldlevel=99
 set foldclose=all
 set guicursor=i:blinkwait700-blinkon400-blinkoff250
+
+" Binds
+nnoremap <Home> <Nop>
+nnoremap <End> <Nop>
+nnoremap <Del> <Nop>
+nnoremap <BS> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <PageUp> <Nop>
+nnoremap <PageDown> <Nop>
+nnoremap <Space> <Nop>
+nnoremap <Enter> <Nop>
+inoremap <Home> <Nop>
+inoremap <End> <Nop>
+inoremap <Del> <Nop>
+inoremap <BS> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <PageUp> <Nop>
+inoremap <PageDown> <Nop>
+vnoremap <Home> <Nop>
+vnoremap <End> <Nop>
+vnoremap <Del> <Nop>
+vnoremap <BS> <Nop>
+vnoremap <Up> <Nop>
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+vnoremap <PageUp> <Nop>
+vnoremap <PageDown> <Nop>
+vnoremap <Space> <Nop>
+vnoremap <Enter> <Nop>
 
 " Completion
 set completeopt-=preview
@@ -78,12 +115,12 @@ colorscheme Tomorrow-Night-Eighties
 "colorscheme breeze
 highlight LineNr guifg=Silver
 "highlight CursorLineNr guifg=Grey14 guibg=Grey42
-"highlight StatusLine guifg=Grey66 guibg=Grey11
+highlight StatusLine guifg=Grey66 guibg=Grey11
 highlight Normal guibg=Grey11
 highlight NonText guibg=Grey11
 highlight DbgBreakptLine guibg=Grey23
 highlight NERDTreeFile guibg=None
 " highlight ColorColumn guibg=Grey11
 
-let g:airline_theme='minimalist'
+"let g:airline_theme='minimalist'
 "let g:airline_theme='desertink'

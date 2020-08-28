@@ -1,4 +1,4 @@
-# deps: otf-san-franciscor, urxvt, rofi, pulseaudio, light, flameshot,
+# deps: otf-san-francisco, urxvt, rofi, pulseaudio, light, flameshot,
 # i3lock-color (+ ui3lock script), i3blocks, xrand, numlockx, compton,
 # xf86-input-synaptics, dpms, NetworkManager, xfce4-clipman, 
 # xfce4-power-manager, firefox
@@ -9,7 +9,7 @@ set $mod Mod4
 
 # Workspaces
 set $ws1 "1:Terminal"
-set $ws2 "2:Browser"
+set $ws2 "2:Web"
 set $ws3 "3:3"
 set $ws4 "4:4"
 set $ws5 "5:5"
@@ -65,7 +65,7 @@ mode "resize" {
 
 # Binds
 # start a terminal
-bindsym --release $mod+Return exec termite
+bindsym --release $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -213,10 +213,10 @@ for_window [class="Termite"] border pixel 1
 
 
 # Startup Exec
-# exec_always --no-startup-id feh --bg-scale /home/bma/Pictures/Arch1.jpg
+exec_always --no-startup-id feh --bg-scale /home/bma/Pictures/6.jpg
 exec_always --no-startup-id xrandr --output VGA-1 --off --output HDMI-1 --off --output eDP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal
 exec_always --no-startup-id setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle -option keypad:pointerkeys
-# exec_always --no-startup-id xset -b
+exec_always --no-startup-id xset -b
 exec --no-startup-id synclient VertScrollDelta=-50 HorizTwoFingerScroll=1 HorizScrollDelta=-80 FingerHigh=10 # FingerLow=10
 # exec_always --no-startup-id xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
 # exec_always --no-startup-id xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Disable While Typing Enabled" 0
@@ -242,7 +242,11 @@ assign [class="firefox"] $ws2
 assign [class="Xfce4-terminal"] $ws1
 assign [class="Gnome-terminal"] $ws1
 assign [class="Mate-terminal"] $ws1
-assign [class="URxvt"] $ws1
+# assign [class="URxvt"] $ws1
 assign [class="Termite"] $ws1
+assign [class="discord"] $ws8
+assign [class="ViberPC"] $ws8
+assign [class="Skype"] $ws8
 assign [class="Thunderbird"] $ws9
 assign [class="Audacious"] $ws10
+assign [class="Deadbeef"] $ws10
