@@ -82,6 +82,16 @@ vnoremap <PageUp> <Nop>
 vnoremap <PageDown> <Nop>
 vnoremap <Space> <Nop>
 vnoremap <Enter> <Nop>
+cnoremap <Home> <Nop>
+cnoremap <End> <Nop>
+cnoremap <Del> <Nop>
+cnoremap <BS> <Nop>
+cnoremap <Up> <Nop>
+cnoremap <Down> <Nop>
+cnoremap <Left> <Nop>
+cnoremap <Right> <Nop>
+cnoremap <PageUp> <Nop>
+cnoremap <PageDown> <Nop>
 
 " Completion
 set completeopt-=preview
