@@ -63,7 +63,7 @@ nnoremap <Enter> <Nop>
 inoremap <Home> <Nop>
 inoremap <End> <Nop>
 inoremap <Del> <Nop>
-inoremap <BS> <Nop>
+" inoremap <BS> <Nop>
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
@@ -85,7 +85,7 @@ vnoremap <Enter> <Nop>
 cnoremap <Home> <Nop>
 cnoremap <End> <Nop>
 cnoremap <Del> <Nop>
-cnoremap <BS> <Nop>
+" cnoremap <BS> <Nop>
 cnoremap <Up> <Nop>
 cnoremap <Down> <Nop>
 cnoremap <Left> <Nop>
