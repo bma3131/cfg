@@ -202,6 +202,8 @@ bar {
 				urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 		}
 	strip_workspace_numbers yes
+	output eDP
+    tray_output eDP
 }
 
 
