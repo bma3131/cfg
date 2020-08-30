@@ -26,7 +26,6 @@ set $text-color				#f3f4f5
 set $inactive-text-color	#99A099
 set $urgent-bg-color		#8D0A01
 
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:System San Francisco Display 11px
@@ -151,10 +150,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# move workspace to another screen
-bindsym $mod+Shift+t move workspace to output right
-bindsym $mod+Shift+s move workspace to output left
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -236,6 +231,18 @@ exec_always --no-startup-id xdg-settings set default-web-browser firefox.desktop
 # exec_always --no-startup-id xautolock -time 5 -locker i3lock --color "$bg-color"
 # exec_always --no-startup-id xautolock -time 10 -locker "systemctl suspend"
 exec_always --no-startup-id xfce4-power-manager
+
+# workspaces and output screens
+workspace $ws1	output eDP
+workspace $ws2	output eDP
+workspace $ws3	output eDP
+workspace $ws4	output eDP
+workspace $ws5	output eDP
+workspace $ws6	output eDP
+workspace $ws7	output HDMI-0
+workspace $ws8	output eDP
+workspace $ws9	output eDP
+workspace $ws10 output eDP
 
 # Workspace Assignments
 # assign [class="Google-chrome"] $ws2
