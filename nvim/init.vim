@@ -110,6 +110,8 @@ nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType cpp setlocal ts=4 sts=4 sw=4 expandtab 
+autocmd FileType cpp inoremap <C-s> std::
 
 " C Completion
 let g:clang_library_path='/usr/lib/llvm-3.9/lib/'
