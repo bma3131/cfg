@@ -5,12 +5,13 @@ Plug 'flazz/vim-colorschemes'
 Plug 'xavierd/clang_complete'
 Plug 'StanAngeloff/php.vim'
 Plug 'shawncplus/phpcomplete.vim'
-"Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'vim-vdebug/vdebug'
 Plug 'pangloss/vim-javascript'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim'
+" Plug 'bfrg/vim-cpp-modern'
 
 call plug#end()
 
@@ -62,7 +63,11 @@ nnoremap <Space> <Nop>
 nnoremap <Enter> <Nop>
 inoremap <Home> <Nop>
 inoremap <End> <Nop>
-inoremap <Del> <Nop>
+" inoremap <Del> <Nop>
+inoremap <C-h> <left>
+inoremap <C-j> <down>
+inoremap <C-k> <up>
+inoremap <C-l> <right>
 " inoremap <BS> <Nop>
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
@@ -84,7 +89,6 @@ vnoremap <Space> <Nop>
 vnoremap <Enter> <Nop>
 cnoremap <Home> <Nop>
 cnoremap <End> <Nop>
-cnoremap <Del> <Nop>
 " cnoremap <BS> <Nop>
 cnoremap <Up> <Nop>
 cnoremap <Down> <Nop>
@@ -92,6 +96,10 @@ cnoremap <Left> <Nop>
 cnoremap <Right> <Nop>
 cnoremap <PageUp> <Nop>
 cnoremap <PageDown> <Nop>
+cnoremap <C-h> <left>
+cnoremap <C-j> <down>
+cnoremap <C-k> <up>
+cnoremap <C-l> <right>
 
 " Completion
 set completeopt-=preview
@@ -111,6 +119,9 @@ autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType cpp setlocal ts=4 sts=4 sw=4 expandtab 
+autocmd FileType cpp set smartindent
+" autocmd FileType cpp set cinoptions=l1,g0.5s,h0.5s,:0.5s,=0.5s,t0,(0
+autocmd FileType cpp set cinoptions=l1,g0.5s,h0.5s,:0.5s,=0.5s,t0
 autocmd FileType cpp inoremap <C-s> std::
 
 " C Completion
