@@ -122,7 +122,9 @@ autocmd FileType cpp setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType cpp set smartindent
 " autocmd FileType cpp set cinoptions=l1,g0.5s,h0.5s,:0.5s,=0.5s,t0,(0
 autocmd FileType cpp set cinoptions=l1,g0.5s,h0.5s,:0.5s,=0.5s,t0
+autocmd FileType hpp set cinoptions=l1,g0.5s,h0.5s,:0.5s,=0.5s,t0
 autocmd FileType cpp inoremap <C-s> std::
+autocmd FileType hpp inoremap <C-s> std::
 
 " C Completion
 let g:clang_library_path='/usr/lib/llvm-3.9/lib/'
