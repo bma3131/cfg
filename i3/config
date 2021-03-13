@@ -160,19 +160,19 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_14.2.analog-stereo +5% # increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_14.2.analog-stereo -5% # decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_14.2.analog-stereo +3% # increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_14.2.analog-stereo -3% # decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_00_14.2.analog-stereo toggle # mute sound
-bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_01.1.hdmi-stereo +5% # increase sound volume
-bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_01.1.hdmi-stereo -5% # decrease sound volume
-bindsym Shift+XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_00_01.1.hdmi-stereo toggle # mute sound
+bindsym Control+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_01.1.hdmi-stereo +3% # increase sound volume
+bindsym Control+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_01.1.hdmi-stereo -3% # decrease sound volume
+bindsym Control+XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_00_01.1.hdmi-stereo toggle # mute sound
 
 # Brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 # decrease screen brightness
 
 # i3lock
-bindsym $mod+shift+x exec --no-startup-id /home/bma/bin/ui3lock && sleep 1 && xset dpms force off
+bindsym $mod+shift+x exec --no-startup-id shome/bma/bin/ui3lock --keylayout 1 && sleep 1 && xset dpms force off
 bindsym $mod+shift+z exec --no-startup-id systemctl suspend
 
 # PrintScreen
@@ -217,7 +217,7 @@ for_window [class="Termite"] border pixel 1
 
 
 # Startup Exec
-exec_always --no-startup-id feh --bg-scale /home/bma/Pictures/09.jpg
+exec_always --no-startup-id feh --bg-scale /home/bma/Pictures/03.jpg
 exec_always --no-startup-id xrandr --output VGA-1 --off --output HDMI-1 --off --output eDP-1 --primary --mode 1366x768 --pos 0x0 --rotate normal
 exec_always --no-startup-id setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle -option keypad:pointerkeys
 exec_always --no-startup-id xset -b
@@ -267,3 +267,4 @@ assign [class="Skype"] $ws8
 assign [class="Thunderbird"] $ws9
 assign [class="Audacious"] $ws10
 assign [class="Deadbeef"] $ws10
+assign [class="Spotify"] $ws10

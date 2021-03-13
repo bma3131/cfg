@@ -48,6 +48,9 @@ set foldlevel=99
 set foldclose=all
 set guicursor=i:blinkwait700-blinkon400-blinkoff250
 
+" tmux colors fix
+set termguicolors
+
 " Binds
 nnoremap <Home> <Nop>
 nnoremap <End> <Nop>
