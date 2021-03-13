@@ -6,4 +6,3 @@
 (add-to-list 'default-frame-alist '(font . "Consolas" ))
 (set-face-attribute 'default t :font "Consolas" )
 (set-face-attribute 'default nil :height 110)
-(fill-column-indicator 80)
