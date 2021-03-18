@@ -8,6 +8,7 @@
 (setq inhibit-startup-screen t)
 (setq column-number-mode t)
 (auto-fill-mode -1)
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 (setq-default fill-column 80)
 (global-display-fill-column-indicator-mode 1)
@@ -26,3 +27,5 @@
 (setq explicit-shell-file-name "c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe")
 (setq explicit-powershell.exe-args '("-Command" "-" ))
 ;(autoload 'powershell "powershell" "Run powershell as a shell within emacs." t) 
+
+ (require 'mule)
