@@ -6,6 +6,7 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
+(setq evil-want-C-u-scroll t)
 (require 'evil)
 ;(evil-mode 1)
 
